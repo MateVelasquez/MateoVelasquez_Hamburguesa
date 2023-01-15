@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MateoVelasquez_Hamburguesa.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Views="clr-namespace:MateoVelasquez_Hamburguesa.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    
+    <ShellContent
+        Title="MV_BurgerListPage"
+        ContentTemplate="{DataTemplate Views:MV_BurgerListPage}"
+        Route="MV_BurgerListPage" />
+
+    <ShellContent
+        Title="MV_BurgerItemPage"
+        ContentTemplate="{DataTemplate Views:MV_BurgerItemPage}"
+        Route="MV_BurgerItemPage" />
+
+</Shell>
+
+
