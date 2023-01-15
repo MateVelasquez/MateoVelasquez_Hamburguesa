@@ -4,24 +4,24 @@
              x:Class="MateoVelasquez_Hamburguesa.Views.MV_BurgerListPage"
              xmlns:models="clr-namespace:MateoVelasquez_Hamburguesa.Models"
              Title="Lista de Hamburguesas Ingresadas">
-    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,auto">
-        <Grid HeightRequest="20" VerticalOptions="Start" BackgroundColor="Blue">
+    <Grid  RowDefinitions="*,Auto">
+        
+        <Grid  VerticalOptions="StartAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Label Text="ID" HorizontalTextAlignment="Center"/>
-            <Label Grid.Column="1" Text="Nombre"/>
-            <Label Grid.Column="2" Text="Descripción"/>
-            <Label Grid.Column="3" Text="Con queso extra?"/>
+            <Label Text="ID" HorizontalTextAlignment="Center" FontSize="Title"/>
+            <Label Grid.Column="1" Text="Nombre" HorizontalTextAlignment="Center" FontSize="Title"/>
+            <Label Grid.Column="2" Text="Descripción" HorizontalTextAlignment="Center" FontSize="Title"/>
+            <Label Grid.Column="3" Text="Con queso extra?" HorizontalTextAlignment="Center" FontSize="Title"/>
         </Grid>
-        
-        <CollectionView x:Name="burgerListMV">
+        <CollectionView x:Name="burgerListMV" VerticalOptions="CenterAndExpand">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:MV_Burger">
-                    <Grid VerticalOptions="Center">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="2*"/>
@@ -29,12 +29,11 @@
                             <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
                         <Label Text="{Binding Id}" HorizontalTextAlignment="Center"/>
-                        <Label Grid.Column="1" Text="{Binding MV_Name}"/>
-                        <Label Grid.Column="2" Text="{Binding MV_Description}"/>
-                        <Label Grid.Column="3" Text="{Binding MV_WithExtraCheese}"/>
+                        <Label Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding MV_Name}"/>
+                        <Label Grid.Column="2"  HorizontalTextAlignment="Center" Text="{Binding MV_Description}"/>
+                        <Label Grid.Column="3" HorizontalTextAlignment="Center" Text="{Binding MV_WithExtraCheese}"/>
                     </Grid>
                 </DataTemplate>
-
             </CollectionView.ItemTemplate>
         </CollectionView>
         <Button VerticalOptions="End"
