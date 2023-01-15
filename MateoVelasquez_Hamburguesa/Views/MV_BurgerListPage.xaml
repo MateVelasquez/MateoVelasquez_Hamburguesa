@@ -4,8 +4,8 @@
              x:Class="MateoVelasquez_Hamburguesa.Views.MV_BurgerListPage"
              xmlns:models="clr-namespace:MateoVelasquez_Hamburguesa.Models"
              Title="Lista de Hamburguesas Ingresadas">
-    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,Auto">
-        <Grid VerticalOptions="StartAndExpand" Margin="10">
+    <Grid RowDefinitions="*,Auto" ColumnDefinitions="*,auto">
+        <Grid HeightRequest="20" VerticalOptions="Start" BackgroundColor="Blue">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="2*"/>
@@ -17,10 +17,11 @@
             <Label Grid.Column="2" Text="Descripción"/>
             <Label Grid.Column="3" Text="Con queso extra?"/>
         </Grid>
+        
         <CollectionView x:Name="burgerListMV">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:MV_Burger">
-                    <Grid>
+                    <Grid VerticalOptions="Center">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="2*"/>
