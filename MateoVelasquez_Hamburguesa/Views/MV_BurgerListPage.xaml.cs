@@ -16,4 +16,10 @@ public partial class MV_BurgerListPage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(MV_BurgerItemPage));
     }
+
+    private void update(object sender, EventArgs e)
+    {
+        List<MV_Burger> burger = App.BurgerRepo.GetAllBurgers();
+        burgerListMV.ItemsSource = burger;
+    }
 }

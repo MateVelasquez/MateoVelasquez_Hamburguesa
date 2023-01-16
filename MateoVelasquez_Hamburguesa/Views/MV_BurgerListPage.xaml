@@ -5,7 +5,7 @@
              xmlns:models="clr-namespace:MateoVelasquez_Hamburguesa.Models"
              Title="Lista de Hamburguesas Ingresadas">
     <Grid  RowDefinitions="*,Auto">
-        
+
         <Grid  VerticalOptions="StartAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -36,11 +36,21 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button VerticalOptions="End"
+        <Grid Grid.Row="1" ColumnDefinitions="*,*">
+            <Button Grid.Row="0" Grid.Column="1"
+                    VerticalOptions="End"
                     Text="Añadir nuevo registro" 
                     Clicked="OnItemAdded" 
                     FontAttributes="Bold"
                     Margin="20"
                     CornerRadius="20"/>
+            <Button Grid.Row="0" Grid.Column="0"
+                    VerticalOptions="End"
+                    Text="Actualizar Lista" 
+                    Clicked="update" 
+                    FontAttributes="Bold"
+                    Margin="20"
+                    CornerRadius="20"/>
+        </Grid>
     </Grid>
 </ContentPage>

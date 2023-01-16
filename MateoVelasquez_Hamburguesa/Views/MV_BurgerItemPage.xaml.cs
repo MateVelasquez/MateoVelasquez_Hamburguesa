@@ -1,6 +1,7 @@
 namespace MateoVelasquez_Hamburguesa.Views;
-using MateoVelasquez_Hamburguesa.Data;
 using MateoVelasquez_Hamburguesa.Models;
+using System.Collections.Generic;
+
 
 public partial class MV_BurgerItemPage : ContentPage
 {
@@ -10,7 +11,7 @@ public partial class MV_BurgerItemPage : ContentPage
     public MV_BurgerItemPage()
 	{
         InitializeComponent();
-	}
+    }
 
     private void OnSaveClicked(object sender, EventArgs e)
     {
